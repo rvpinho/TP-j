@@ -27,7 +27,7 @@ void deleteHashTable(int employerID, int partitionID) {
         sprintf(funcHashDelet.data_nascimento, "%s", auxFunc->data_nascimento);
         funcHashDelet.salario = auxFunc->salario;
 
-        saveRegisterEmployee(&funcHashDelet, filePartition);
+        salva_funcionario(&funcHashDelet, filePartition);
 
         printf("\nEmployee deleted successfully.");
     } else {

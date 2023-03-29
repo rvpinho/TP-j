@@ -15,7 +15,7 @@ TFunc *searchHashTable(int employerID, int partitionID) {
 
     FILE *filePartition = fopen(partitionName,"rb+");
 
-    TFunc *auxFunc = sequentialFetch(employerID, filePartition, &totalCompararisons);
+    TFunc *auxFunc; //= sequentialFetch(employerID, filePartition, &totalCompararisons);
 
     fclose(filePartition);
 

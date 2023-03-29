@@ -1,8 +1,8 @@
 #include "funcionarios.h"
 
-void hashTable(FILE *file, int numberOfPartition, int sizeFile) {
+void hashTable(FILE *arq, int numberOfPartition, int sizeFile) {
 
-    rewind(file);
+    rewind(arq);
 
     char partitionName[100];
     char str1[100];
@@ -10,7 +10,7 @@ void hashTable(FILE *file, int numberOfPartition, int sizeFile) {
 
     for (int i = 0; i < sizeFile; ++i) {
 
-        TFunc *auxFunc = readRegisterEmployee(file);
+        TFunc *auxFunc = le_funcionario(arq);
 
         int selectedParticipation = auxFunc->cod % numberOfPartition;
 
@@ -20,7 +20,7 @@ void hashTable(FILE *file, int numberOfPartition, int sizeFile) {
 
         FILE *filePartition = fopen(partitionName,"ab+");
 
-        saveRegisterEmployee(auxFunc, filePartition);
+        salva_funcionario(auxFunc, filePartition);
 
         fclose(filePartition);
 

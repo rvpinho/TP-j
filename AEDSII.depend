@@ -369,13 +369,16 @@
 	<string.h>
 	"lista.h"
 
-1679088941 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\main.c
+1680054491 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\main.c
 	<stdlib.h>
 	"ordenacao_busca.h"
 	"lista.h"
 	"particoes.h"
-	"intercalacao.h"
 	"arvore_binaria.h"
+	"arvore_binaria.h"
+	"arvore_binaria.h"
+	"arvore_binaria.h"
+	"make_partition_hash_table.c"
 
 1613427796 c:\users\pichau\desktop\workspace\aedes2\tp-j\ordenacao_busca.h
 	<stdio.h>
@@ -409,98 +412,39 @@
 1615750884 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\pilha.c
 	"pilha.h"
 
-1679085701 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\funcionario.c
+1680055206 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\funcionario.c
 	<stdlib.h>
 	<string.h>
-	"funcionarios.h"
-
-1679659883 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\busca_hash.c
-	"funcionarios.h"
-
-1679660011 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\insert_hash.c
-	"funcionarios.h"
-
-1679660102 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\deleta_hash.c
-	"funcionarios.h"
-
-1679660108 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\hash_table.c
-	"funcionarios.h"
-
-1679090333 source:c:\users\rafael\downloads\tp-j\tp-j\arvore_binaria.c
-	"arvore_binaria.h"
-
-1679086580 c:\users\rafael\downloads\tp-j\tp-j\arvore_binaria.h
-	<stdio.h>
-	<stdlib.h>
-	"funcionarios.h"
-
-1615749978 c:\users\rafael\downloads\tp-j\tp-j\funcionarios.h
-	<stdio.h>
-
-1679659883 source:c:\users\rafael\downloads\tp-j\tp-j\busca_hash.c
-	"funcionarios.h"
-
-1679660102 source:c:\users\rafael\downloads\tp-j\tp-j\deleta_hash.c
-	"funcionarios.h"
-
-1679085701 source:c:\users\rafael\downloads\tp-j\tp-j\funcionario.c
-	<stdlib.h>
-	<string.h>
-	"funcionarios.h"
-
-1679660108 source:c:\users\rafael\downloads\tp-j\tp-j\hash_table.c
-	"funcionarios.h"
-
-1679660011 source:c:\users\rafael\downloads\tp-j\tp-j\insert_hash.c
-	"funcionarios.h"
-
-1615750279 source:c:\users\rafael\downloads\tp-j\tp-j\intercalacao.c
-	"intercalacao.h"
-	"funcionarios.h"
-	<limits.h>
-	<stdio.h>
-	<stdlib.h>
-
-1615751144 c:\users\rafael\downloads\tp-j\tp-j\intercalacao.h
-	"lista.h"
-	"pilha.h"
-
-1615751750 c:\users\rafael\downloads\tp-j\tp-j\lista.h
-
-1679080535 c:\users\rafael\downloads\tp-j\tp-j\pilha.h
-	"funcionarios.h"
-
-1615751709 source:c:\users\rafael\downloads\tp-j\tp-j\lista.c
-	<stdlib.h>
-	<stdio.h>
-	<string.h>
-	"lista.h"
-
-1615751784 source:c:\users\rafael\downloads\tp-j\tp-j\manipulacao_arquivos.c
-	<stdlib.h>
-	"manipulacao_arquivos.h"
-	"funcionarios.h"
-	"math.h"
-
-1615751767 c:\users\rafael\downloads\tp-j\tp-j\manipulacao_arquivos.h
-	<stdio.h>
-
-1679080554 source:c:\users\rafael\downloads\tp-j\tp-j\ordenacao_busca.c
-	<stdio.h>
-	<stdlib.h>
 	<math.h>
+	<stdbool.h>
 	"funcionarios.h"
 
-1679080563 source:c:\users\rafael\downloads\tp-j\tp-j\particoes.c
+1680048757 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\busca_hash.c
 	"funcionarios.h"
-	<stdlib.h>
-	<limits.h>
-	"particoes.h"
 
-1615819418 c:\users\rafael\downloads\tp-j\tp-j\particoes.h
-	<stdio.h>
-	"lista.h"
+1680051731 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\insert_hash.c
+	"funcionarios.h"
+	"insert_hash.h"
 
-1615750884 source:c:\users\rafael\downloads\tp-j\tp-j\pilha.c
-	"pilha.h"
+1680051177 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\deleta_hash.c
+	"funcionarios.h"
+
+1680051406 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\hash_table.c
+	"funcionarios.h"
+
+1680049506 c:\users\pichau\desktop\workspace\aedes2\tp-j\hash_table.h
+
+1680049675 c:\users\pichau\desktop\workspace\aedes2\tp-j\insert_hash.h
+
+1680050984 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\sequentialfetch.c
+	"funcionarios.h"
+
+1680052071 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\size_file.c
+	"funcionarios.h"
+
+1680052074 source:c:\users\pichau\desktop\workspace\aedes2\tp-j\print_partition_employee_id.c
+	"funcionarios.h"
+
+1680054352 c:\users\pichau\desktop\workspace\aedes2\tp-j\make_partition_hash_table.c
+	"funcionarios.h"
 

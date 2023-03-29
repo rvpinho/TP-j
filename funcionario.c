@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
+#include <stdbool.h>
 #include "funcionarios.h"
 
 TFunc *funcionario(int cod, char *nome, char *cpf, char *data, double salario){
@@ -80,31 +82,50 @@ void cria_base_dados_funcionarios(FILE* arq, FILE* arqIndicePrimario, FILE* arqI
         fwrite(&chaves[f], sizeof(int), 1, arqIndicePrimario);
     }
 }
-
+int numero_aleatorio_unico(int chaves[], int nFunc){
+    int numero_aleatorio;
+    while (1) {
+        numero_aleatorio = rand() % 100; // gera um número aleatório
+        int found = 0;
+        for (int i = 0; i < nFunc; i++) {
+            if (chaves[i] == numero_aleatorio) {
+                found = 1; // encontrou o número no vetor
+                break;
+            }
+        }
+        if (!found) {
+            return numero_aleatorio; // retorna o número se não estiver no vetor
+        }
+    }
+}
 void cria_base_dados_funcionarios_teste(FILE* arq, FILE* arqIndicePrimario,  FILE* arqIndicePrimarioNaoOrdenado, int nFunc){
     int i = 0;
     int chaves[nFunc+1];
-    // Define a semente para a função rand baseado no tempo atual
-    srand(time(NULL));
+    TFunc *f;
+
+   /* for (int i = 1; i <= nFunc; i++)
+    {
+        f = funcionario(i, "Funcionario", "000.000.000-00", "27/05/1989", 5000.00);
+        salva_funcionario(f, arq);
+    }
+    fflush(arq);*/
+
+    int numero_aleatorio =0;
     char nome[] = "Funcionario";
-    int numero_aleatorio;
+
     for(int i =0; i<nFunc; i++){
         // cria e preenche arquivo de funcionario
         // cria a string formatada
         snprintf(nome,sizeof(nome)+3,"Funcionario%d",i);
 
-
-        // Gera um número aleatório entre 0 e 19
-        numero_aleatorio = rand() % 100;
-        // Adiciona 1 para obter um número aleatório entre 1 e 50
-        numero_aleatorio += 1;
+        numero_aleatorio = numero_aleatorio_unico(chaves, nFunc);
 
         TFunc *func = funcionario(numero_aleatorio, nome,"000.000.000-00","27/05/1989",5000);
         fseek(arq, (i) * tamanho_registro(), SEEK_SET);
         salva_funcionario(func, arq);
         // cria e preenche arquivo de chaves
 
-        chaves[func->cod]= i;
+       chaves[i]= func->cod;
         fwrite(&func->cod,sizeof(int), 1, arqIndicePrimario);  //escreve a chave
         fwrite(&i, sizeof(int), 1, arqIndicePrimario); //escreve o rrn
         free(func);

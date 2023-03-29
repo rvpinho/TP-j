@@ -48,6 +48,7 @@
 		<Unit filename="hash_table.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="hash_table.h" />
 		<Unit filename="insert_hash.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -62,6 +63,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="make_partition_hash_table.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="manipulacao_arquivos.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -74,10 +79,15 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="particoes.h" />
-		<Unit filename="pilha.c">
+		<Unit filename="print_partition_employee_id.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="pilha.h" />
+		<Unit filename="sequentialFetch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="size_file.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

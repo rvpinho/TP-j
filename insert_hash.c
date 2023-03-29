@@ -1,5 +1,6 @@
 //
 #include "funcionarios.h"
+#include "insert_hash.h"
 
 void insertHashTable(TFunc *funcHashTableInsert,int employerID, int partitionID) {
 
@@ -16,22 +17,21 @@ void insertHashTable(TFunc *funcHashTableInsert,int employerID, int partitionID)
 
     FILE *filePartition = fopen(partitionName,"r+b");
 
-    sizefilePartition = sizeFile(filePartition, 0);
+    sizefilePartition = tamanho_arquivo(filePartition, 0);
     rewind(filePartition);
 
-    TFunc *auxFunc = sequentialFetch(funcHashTableInsert->cod, filePartition, &totalCompararisons);
-    rewind(filePartition);
+    TFunc *auxFunc = sequentialFetch(funcHashTableInsert->cod, filePartition, &totalCompararisons);    rewind(filePartition);
 
     TFunc *auxFuncDeleted = sequentialFetch(999999999, filePartition, &totalCompararisonsDeleted);
     rewind(filePartition);
 
     if (auxFunc == NULL && auxFuncDeleted == NULL) {
         fseek(filePartition, (sizefilePartition) * sizeof(TFunc), SEEK_SET);\
-        saveRegisterEmployee(funcHashTableInsert, filePartition);
+        salva_funcionario(funcHashTableInsert, filePartition);
         printf("\nEmployee entered successfully at the end.");
     } else if (auxFunc == NULL && auxFuncDeleted != NULL){
         fseek(filePartition, (totalCompararisonsDeleted - 1) * sizeof(TFunc), SEEK_SET);\
-        saveRegisterEmployee(funcHashTableInsert, filePartition);
+        salva_funcionario(funcHashTableInsert, filePartition);
         printf("\nEmployee entered successfully at employee previous deleted.");
     } else {
         printf("\nEmployee id already exist in the Hash Table.");
