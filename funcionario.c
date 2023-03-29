@@ -85,7 +85,7 @@ void cria_base_dados_funcionarios(FILE* arq, FILE* arqIndicePrimario, FILE* arqI
 int numero_aleatorio_unico(int chaves[], int nFunc){
     int numero_aleatorio;
     while (1) {
-        numero_aleatorio = rand() % 100; // gera um número aleatório
+        numero_aleatorio = rand() % 1000; // gera um número aleatório
         int found = 0;
         for (int i = 0; i < nFunc; i++) {
             if (chaves[i] == numero_aleatorio) {

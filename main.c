@@ -1,6 +1,6 @@
 
 #include <stdlib.h>
-
+#include <stdbool.h>
 #include "ordenacao_busca.h"
 #include "lista.h"
 #include "particoes.h"
@@ -17,15 +17,27 @@ int menu(){
 
     printf("\nDigite 1 para utilizar a base de dados funcionario de teste.");
     printf("\nDigite 2 se desejar imprimir a base de dados funcionario.");
-    printf("\nDigite 3 se desejar imprimir o índice primário da base de funcionarios.");
+    printf("\nDigite 3 se desejar imprimir o indice primario da base de funcionarios.");
+
+        printf("\n\n-----Questao 2----- \n");
+    printf("\nDigite 4 se desejar consultar funcionarios.");
+    printf("\nDigite 5 se desejar imprimir o log de consultas de funcionarios.");
+
+    printf("\n\n-----Questao 3----- \n");
+    printf("\nDigite 6 se desejar ordenar os funcionarios.(INSERTION SORT)");
+
+
+    printf("\n\n-----Questao 5----- \n");
+    printf("\nDigite 7 se desejar ordenar e buscar os funcionarios.(BUSCA BINÁRIA)");
+
 
     printf("\n\nÁRVORE BINÁRIA, ARVORE B\n");
-    printf("\nDigite 10 para criar árvores binárias em memória interna e externa.");
+    printf("\nDigite 10 para criar arvores binarias em memoria interna e externa.");
     printf("\nDigite 11 para buscar um funcionario pela chave.");
     printf("\nDigite 12 para excluir um funcionario pela chave.");
 
     printf("\n\nTABELA HASH\n");
-    printf("\nDigite 13 para criar árvores binárias em memória interna e externa.");
+    printf("\nDigite 13 para criar arvores binarias em memoria interna e externa.");
 
     printf("\nDigite -1 para sair: ");
     scanf("%d", &op);
@@ -35,6 +47,7 @@ int menu(){
 }
 
 int main(){
+
 
     /*criando um arquivo lógico para abir para leitura e escrita o arquivo binário*/
     FILE* arq = fopen("base_funcionarios.dat", "wb+");
@@ -65,7 +78,7 @@ int main(){
     }
 
     int crioubase =0;
-
+    bool arqPreenchido = true;
     int op = menu();
     int nFunc, codF;
 
@@ -87,7 +100,7 @@ int main(){
         switch (op){
             case (1):
                 //criando a base de dados de funcionários teste e o arquivo de índice primário
-                nFunc = 50; //
+                 nFunc = 500; //QUANTIDADE DE FUNCIONARIOS A SER CRIADA
                 cria_base_dados_funcionarios_teste(arq, arqIndicePrimario, arqIndicePrimarioNaoOrdenado, nFunc);
                 crioubase = 1;
                 break;
@@ -107,9 +120,57 @@ int main(){
                 }else  printf("Indice primario inexistente para ser impresso, será criado após a definição da base de dados utilizando a opção 1 do menu!!!\n");
                 break;
 
+                 // Questão 2
+            /*case(4):
+            // realiza busca sequencial na base de dados
+            if(arqPreenchido==1){
+                imprime_base_dados_funcionarios(arq, nFunc);
+                //procurando por um funcionário na base de dados usando o método de busca binária
+                int cod_busca;
+                printf("\n\nDigite o codigo do funcionário procurado (digite -1 caso não queira procurar um funcionário): ");
+                scanf("%d", &cod_busca);
+                if(cod_busca!= -1){
+                    TFunc func = busca_sequencial_funcionario(arq, cod_busca);
+                    imprime_funcionario(&func);
+                    free(&func);
+                }
+            }else printf("Base de dados inexistente para ser ordenada, crie utilizando a opção 1 do menu!!!\n");
+            break;*/
+
+        case(5):
+            break;
+
+        // Questão 3
+        case(6):
+            if(arqPreenchido){
+                insertion_sort_disco(arq, nFunc);
+                printf("\nBase de dados ordenada no disco\n");
+                imprime_base_dados_funcionarios(arq, nFunc);
+            }else printf("Base de dados inexistente para ser ordenada, crie utilizando a opção 1 do menu!!!\n");
+            break;
+        // Questão 5
+        case (7):
+                 //ordenando a base de dados utilizando ordenação direta no arquivo com o método inseriton sort
+            if(arqPreenchido){
+                insertion_sort_disco(arq, nFunc);
+                imprime_base_dados_funcionarios(arq, nFunc);
+                //procurando por um funcionário na base de dados usando o método de busca binária
+                int cod_busca;
+                printf("\n\nDigite o codigo do funcionário procurado (digite -1 caso não queira procurar um funcionário): ");
+                scanf("%d", &cod_busca);
+                if(cod_busca!= -1){
+                    TFunc* func = busca_binaria(cod_busca, arq, nFunc);
+                    imprime_funcionario(func);
+                    free(func);
+                }
+            }else printf("Base de dados inexistente para ser ordenada, crie utilizando a opção 1 do menu!!!\n");
+            break;
+
             case (10):
                 //cria árvore binária em memória utilizando o arquivo de índice primário ordenado
+
                 if(crioubase==1){
+                    int tamD = 5;
                     printf("\nArvore binária em memória pelo arquivo de  índice primário ordenado\n <nopai <noesq><nodireita> >\n");
                     cria_arvore_binaria_indice_primario(arqIndicePrimario,nFunc);
                     printf("\nArvore binária em memória pelo arquivo de índice primário não ordenado\n <nopai <noesq><nodireita> >\n");

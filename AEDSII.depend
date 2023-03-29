@@ -448,3 +448,111 @@
 1680054352 c:\users\pichau\desktop\workspace\aedes2\tp-j\make_partition_hash_table.c
 	"funcionarios.h"
 
+1679090334 source:c:\users\rafael\desktop\git\tp-j\arvore_binaria.c
+	"arvore_binaria.h"
+
+1679086582 c:\users\rafael\desktop\git\tp-j\arvore_binaria.h
+	<stdio.h>
+	<stdlib.h>
+	"funcionarios.h"
+
+1615749978 c:\users\rafael\desktop\git\tp-j\funcionarios.h
+	<stdio.h>
+
+1680048758 source:c:\users\rafael\desktop\git\tp-j\busca_hash.c
+	"funcionarios.h"
+
+1680051178 source:c:\users\rafael\desktop\git\tp-j\deleta_hash.c
+	"funcionarios.h"
+
+1680096403 source:c:\users\rafael\desktop\git\tp-j\funcionario.c
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<stdbool.h>
+	"funcionarios.h"
+
+1680051408 source:c:\users\rafael\desktop\git\tp-j\hash_table.c
+	"funcionarios.h"
+
+1680051732 source:c:\users\rafael\desktop\git\tp-j\insert_hash.c
+	"funcionarios.h"
+	"insert_hash.h"
+
+1680049676 c:\users\rafael\desktop\git\tp-j\insert_hash.h
+
+1615750280 source:c:\users\rafael\desktop\git\tp-j\intercalacao.c
+	"intercalacao.h"
+	"funcionarios.h"
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+
+1615751144 c:\users\rafael\desktop\git\tp-j\intercalacao.h
+	"lista.h"
+	"pilha.h"
+
+1615751750 c:\users\rafael\desktop\git\tp-j\lista.h
+
+1679080536 c:\users\rafael\desktop\git\tp-j\pilha.h
+	"funcionarios.h"
+
+1615751710 source:c:\users\rafael\desktop\git\tp-j\lista.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"lista.h"
+
+1680096403 source:c:\users\rafael\desktop\git\tp-j\main.c
+	<stdlib.h>
+	<stdbool.h>
+	"ordenacao_busca.h"
+	"lista.h"
+	"particoes.h"
+	"arvore_binaria.h"
+	"arvore_binaria.h"
+	"arvore_binaria.h"
+	"arvore_binaria.h"
+	"make_partition_hash_table.c"
+
+1613427796 c:\users\rafael\desktop\git\tp-j\ordenacao_busca.h
+	<stdio.h>
+	"funcionarios.h"
+
+1615819418 c:\users\rafael\desktop\git\tp-j\particoes.h
+	<stdio.h>
+	"lista.h"
+
+1680054354 c:\users\rafael\desktop\git\tp-j\make_partition_hash_table.c
+	"funcionarios.h"
+
+1615751784 source:c:\users\rafael\desktop\git\tp-j\manipulacao_arquivos.c
+	<stdlib.h>
+	"manipulacao_arquivos.h"
+	"funcionarios.h"
+	"math.h"
+
+1615751768 c:\users\rafael\desktop\git\tp-j\manipulacao_arquivos.h
+	<stdio.h>
+
+1679080556 source:c:\users\rafael\desktop\git\tp-j\ordenacao_busca.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"funcionarios.h"
+
+1679080564 source:c:\users\rafael\desktop\git\tp-j\particoes.c
+	"funcionarios.h"
+	<stdlib.h>
+	<limits.h>
+	"particoes.h"
+
+1680052076 source:c:\users\rafael\desktop\git\tp-j\print_partition_employee_id.c
+	"funcionarios.h"
+
+1680050986 source:c:\users\rafael\desktop\git\tp-j\sequentialfetch.c
+	"funcionarios.h"
+
+1680052072 source:c:\users\rafael\desktop\git\tp-j\size_file.c
+	"funcionarios.h"
+
